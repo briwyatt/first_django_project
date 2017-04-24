@@ -1,0 +1,11 @@
+<h1>{{ artists.artist_details }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<p>{{ artist.artist_details }}<p>
+
+<ul>
+{% for artist in artist_list.object.all %}
+    <li>{{ forloop.counter }} {{ artists.artist_details }}</li>
+{% endfor %}
+</ul>

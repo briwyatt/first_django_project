@@ -1,0 +1,9 @@
+{% if artist_list %}
+    <ul>
+    {% for artist in artist_list %}
+        <li><a href="{% url 'history:songs' artist.id %}">{{artist.artist_text }}</a></li>    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Artists to display.</p>
+{% endif %}
+w
